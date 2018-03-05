@@ -3,6 +3,7 @@ version: '2'
 services:
   proxy:
     image: traefik
+    container_name: traefik_proxy
     restart: always
     networks:
       - webgateway
@@ -15,4 +16,6 @@ services:
 
 networks:
   webgateway:
-    driver: bridge
+    external:
+      name: traefik_webgateway
+
