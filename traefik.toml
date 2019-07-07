@@ -29,8 +29,11 @@
 # Optional
 # Default:
 [entryPoints]
-    [entryPoints.http]
+  [entryPoints.http]
     address = ":80"
+  [entryPoints.https]
+    address = ":443"
+    [entryPoints.https.tls]
 
 # Traefik logs
 # Enabled by default and log to stdout
